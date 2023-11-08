@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C79D1512AFBC806008D7E78 /* WeatherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C79D1502AFBC806008D7E78 /* WeatherManager.swift */; };
 		2C9071A82AD843B800187132 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9071A72AD843B800187132 /* AppDelegate.swift */; };
 		2C9071AA2AD843B800187132 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9071A92AD843B800187132 /* SceneDelegate.swift */; };
 		2C9071AC2AD843B800187132 /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9071AB2AD843B800187132 /* WeatherViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2C79D1502AFBC806008D7E78 /* WeatherManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherManager.swift; sourceTree = "<group>"; };
 		2C9071A42AD843B800187132 /* Clima-Section-13.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Clima-Section-13.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C9071A72AD843B800187132 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2C9071A92AD843B800187132 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,6 +39,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2C79D14F2AFBC7C1008D7E78 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2C79D1502AFBC806008D7E78 /* WeatherManager.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		2C90719B2AD843B800187132 = {
 			isa = PBXGroup;
 			children = (
@@ -56,6 +66,7 @@
 		2C9071A62AD843B800187132 /* Clima-Section-13 */ = {
 			isa = PBXGroup;
 			children = (
+				2C79D14F2AFBC7C1008D7E78 /* Model */,
 				2C9071BC2AD8446600187132 /* View */,
 				2C9071BB2AD8444900187132 /* Controller */,
 				2C9071A72AD843B800187132 /* AppDelegate.swift */,
@@ -156,6 +167,7 @@
 			files = (
 				2C9071AC2AD843B800187132 /* WeatherViewController.swift in Sources */,
 				2C9071A82AD843B800187132 /* AppDelegate.swift in Sources */,
+				2C79D1512AFBC806008D7E78 /* WeatherManager.swift in Sources */,
 				2C9071AA2AD843B800187132 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

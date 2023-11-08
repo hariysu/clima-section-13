@@ -26,6 +26,7 @@
 		2C9071B02AD843B900187132 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2C9071B32AD843B900187132 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2C9071B52AD843B900187132 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2CCE3E302AFC0D2D003E8433 /* debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = debug.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +67,7 @@
 		2C9071A62AD843B800187132 /* Clima-Section-13 */ = {
 			isa = PBXGroup;
 			children = (
+				2CCE3E2F2AFC0CF8003E8433 /* Config */,
 				2C79D14F2AFBC7C1008D7E78 /* Model */,
 				2C9071BC2AD8446600187132 /* View */,
 				2C9071BB2AD8444900187132 /* Controller */,
@@ -92,6 +94,14 @@
 				2C9071AD2AD843B800187132 /* Main.storyboard */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		2CCE3E2F2AFC0CF8003E8433 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				2CCE3E302AFC0D2D003E8433 /* debug.xcconfig */,
+			);
+			path = Config;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -310,6 +320,7 @@
 		};
 		2C9071B92AD843B900187132 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2CCE3E302AFC0D2D003E8433 /* debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

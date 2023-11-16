@@ -22,7 +22,6 @@ class WeatherViewController: UIViewController, UITextFieldDelegate {
     }
 
     @IBAction func searchPressed(_ sender: UIButton) {
-        print(searchTextField.text!)
         // Dismisses the keyboard
         searchTextField.endEditing(true)
     }

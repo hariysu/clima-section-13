@@ -9,8 +9,14 @@ import Foundation
 
 let apiKey = Bundle.main.infoDictionary?["API_KEY"] as? String ?? ""
 
+protocol WeatherManagerDelegate {
+    func didUpdateWeather(weather: WeatherModel)
+}
+
 struct WeatherManager {
     let weatherUrl = "https://api.openweathermap.org/data/2.5/weather?appid=\(apiKey)&units=metric"
+    
+    var delegate: WeatherManagerDelegate?
     
     func fetchWeather (cityName: String) {
         let urlString = "\(weatherUrl)&q=\(cityName)"
@@ -30,7 +36,11 @@ struct WeatherManager {
                 }
                 if let safeData = data {
                     //let dataString = String(data: safeData, encoding: .utf8)
-                    self.parseJSON(weatherData: safeData)
+                    if let weather = self.parseJSON(weatherData: safeData){
+//                        let weatherVC = WeatherViewController()
+//                        weatherVC.didUpdateWeather(weather: weather)
+                        self.delegate?.didUpdateWeather(weather: weather)
+                    }
                 }
             }
             // 4. Start the task:
@@ -38,7 +48,7 @@ struct WeatherManager {
         }
     }
     
-    func parseJSON (weatherData: Data){
+    func parseJSON (weatherData: Data) -> WeatherModel?{
         let decoder = JSONDecoder()
         do{
             let decodedData = try decoder.decode(WeatherData.self, from: weatherData)
@@ -51,8 +61,10 @@ struct WeatherManager {
             //print(weather.getConditionName(weatherId: id))
             //print(weather.conditionName)
             print(weather.temperatureString)
+            return weather
         }catch{
             print(error)
+            return nil
         }
         
     }

@@ -63,7 +63,7 @@ struct WeatherManager {
             
             //print(weather.getConditionName(weatherId: id))
             //print(weather.conditionName)
-            print(weather.temperatureString)
+            //print(weather.temperatureString)
             return weather
         }catch{
             delegate?.didFailWithError(error: error)

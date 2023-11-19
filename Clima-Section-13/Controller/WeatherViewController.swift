@@ -57,8 +57,11 @@ class WeatherViewController: UIViewController, UITextFieldDelegate, WeatherManag
     // by convention we always have in a delegate method is the identity of the object that caused this delegate method
     // All methods take the delegate’s source object as the first argument.     https://google.github.io/swift/
     func didUpdateWeather(_ weatherManager: WeatherManager, weather: WeatherModel){
-        print(weather.temperature)
-        print(weatherManager.weatherUrl)
+        // We have to call the main thread to update our user interface in the background (via DispatchQueue)
+        DispatchQueue.main.async {
+            self.temperatureLabel.text = weather.temperatureString
+            self.conditionImageView.image = UIImage(systemName: weather.conditionName)
+        }
     }
     
     func didFailWithError(error: Error){

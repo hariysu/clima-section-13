@@ -7,7 +7,7 @@
 
 import UIKit
 
-class WeatherViewController: UIViewController, UITextFieldDelegate, WeatherManagerDelegate {
+class WeatherViewController: UIViewController {
     
     @IBOutlet weak var conditionImageView: UIImageView!
     @IBOutlet weak var temperatureLabel: UILabel!
@@ -21,7 +21,12 @@ class WeatherViewController: UIViewController, UITextFieldDelegate, WeatherManag
         searchTextField.delegate = self
         weatherManager.delegate = self
     }
+}
 
+// MARK: - UITextFieldDelegate
+
+extension WeatherViewController:UITextFieldDelegate{
+    
     @IBAction func searchPressed(_ sender: UIButton) {
         // Dismisses the keyboard
         searchTextField.endEditing(true)
@@ -52,8 +57,12 @@ class WeatherViewController: UIViewController, UITextFieldDelegate, WeatherManag
         textField.text = ""
         
     }
-    
-    
+}
+
+
+//MARK: - WeatherManagerDelegate
+
+extension WeatherViewController: WeatherManagerDelegate{
     // by convention we always have in a delegate method is the identity of the object that caused this delegate method
     // All methods take the delegate’s source object as the first argument.     https://google.github.io/swift/
     func didUpdateWeather(_ weatherManager: WeatherManager, weather: WeatherModel){

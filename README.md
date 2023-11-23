@@ -1,15 +1,13 @@
 # Clima-Section-13
 
-
-
-Section content can be seen below:
+## Section content can be seen below:
 
 
 ![Clima Section 13](Documentation/ss-1.png)
 
 
 
-Key concepts shown in this section are:
+## Key concepts shown in this section are:
 
 - Dark mode, vector assets, SF Symbols
 - UITextFieldDelegate, textFieldShouldReturn, textFieldShouldEndEditing, textFieldDidEndEditing

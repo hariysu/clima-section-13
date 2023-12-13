@@ -24,3 +24,7 @@
 158 - Extensions using protocols, //MARK concept, code organizing<br>
 159 - RequestLocation , startUpdatingLocation, Core Location CLLocationManager, didUpdateLocations<br>
 
+
+## Scheme of Delegate Design Pattern:
+
+![Clima Section 13](Documentation/ss-2.png)

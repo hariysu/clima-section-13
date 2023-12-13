@@ -28,3 +28,7 @@
 ## Scheme of Delegate Design Pattern:
 
 ![Clima Section 13](Documentation/ss-2.png)
+
+- The delegation design pattern is a behavioral pattern in Swift that allows one object to act on behalf of another object. In Swift, this is often achieved through the use of protocols and delegate properties. 
+
+- It allows an object (WeatherManager) to notify another object (WeatherViewController) about certain events or data changes without tightly coupling the two classes. The delegate methods are implemented in the delegate class to define the behavior when these events occur
